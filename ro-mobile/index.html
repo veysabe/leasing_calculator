@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title></title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div class="calculator-block">
+            <div class="calculator-block-content">
+                <div class="calculator-block-content-header">
+                    <img class="calculator-block-content-header__img" src="img/iconfinder_31_5955264.png">
+                    <p>Leasing Calculator</p>
+                </div>
+                <div class="calculator-block-content-logic">
+                    <div class="calculator-block-content-logic-item-box">
+                        <div class="calculator-block-content-logic-item">
+                            <div class="calculator-block-content-logic-item-row">
+                                <p>Prețul  automobilului</p>
+                                <div class="calculator-block-content-logic-item-price-input">
+                                    <input type="text" id="carPriceAmount"></input>
+                                    <span>Euro</span>
+                                </div>
+                            </div>
+                            <div class="calculator-block-content-logic-item-row">
+                                <p class="slider-add-subtract">-</p>
+                                <div class="calculation-slider" id="carPriceSlider"></div>
+                                <span class="slider-add-subtract">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator-block-content-logic-item-box">
+                        <div class="calculator-block-content-logic-item">
+                            <div class="calculator-block-content-logic-item-row">
+                                <p>Perioada finanțării</p>
+                                <div class="calculator-block-content-logic-item-price-input">
+                                    <input type="text" id="contractTerm"></input>
+                                    <span>Luni</span>
+                                </div>
+                            </div>
+                            <div class="calculator-block-content-logic-item-row">
+                                <p class="slider-add-subtract">-</p>
+                                <div class="calculation-slider" id="contractTermSlider"></div>
+                                <span class="slider-add-subtract">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator-block-content-logic-item-box">
+                        <div class="calculator-block-content-logic-item">
+                            <div class="calculator-block-content-logic-item-row">
+                                <p>Avans</p>
+                                <div class="calculator-block-content-logic-item-price-input">
+                                    <input type="text" id="firstPaymentAmount"></input>
+                                    <span>Euro</span>
+                                </div>
+                            </div>
+                            <div class="calculator-block-content-logic-item-row">
+                                <p class="slider-add-subtract">-</p>
+                                <div class="calculation-slider" id="firstPaymentSlider"></div>
+                                <span class="slider-add-subtract">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-block-content-result-nums__button" id="calculatorCalculateButton">
+                    Calculează
+                </div>
+                <div class="calculator-block-content-result">
+                    <div class="calculator-block-content-result-nums">
+                        <div class="calc-results-box">
+                            <div class="calc-results-header">
+                                Rezultate
+                            </div>
+                            <div class="calc-results-numbers">
+                                <p>Rata lunară</p>
+                                <span id="monthlyPaymentResult"></span>
+                                <p>Euro</p>
+                                <p>Dobânda</p>
+                                <span id="percentPayment"></span>
+                                <p>Euro</p>
+                                <p>Total spre plata</p>
+                                <span id="allSum"></span>
+                                <p>Euro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        *Acest calcuator are caracter informativ.<br>
+                        Pot exista alte costuri adiționale.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/__calculator-script.js"></script>
+    </body>
+</html>

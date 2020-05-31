@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+}
+
+.calculator-block {
+    font-family: 'Roboto';
+    margin: auto;
+    width: 1440px;
+    height: 740px;
+    background-color: #171717;
+    display: flex;
+}
+
+.calculator-block-content {
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "header header" "calculator result";
+    grid-gap: 27px;
+    grid-template-rows: 1fr 510px;
+    grid-template-columns: 1.6fr 1fr;
+}
+
+.calculator-block-content-header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.calculator-block-content-header > p {
+    margin-left: 23px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 32px;
+}
+
+.calculator-block-content-logic {
+    grid-area: calculator;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#carPriceSlider {
+    width: 100%;
+}
+
+.calculator-block-content-logic-item-box {
+    width: 100%;
+}
+
+.calculator-block-content-logic-item-box:nth-child(1), .calculator-block-content-logic-item-box:nth-child(2) {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.calculator-block-content-logic-item-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 30px 0;
+}
+
+.calculator-block-content-logic-item {
+    width: 90%;
+    margin: auto;
+}
+
+.calculator-block-content-logic-item-row > p {
+    font-size: 18px;
+}
+
+.calculator-block-content-logic-item-price-input {
+    width: 140px;
+    height: 42px;
+    border-radius: 10px;
+    background-color: #dcdcdc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: right;
+}
+
+.calculator-block-content-logic-item-price-input > input {
+    border: none;
+    outline: none;
+    width: 90%;
+    font-size: 16px;
+    font-family: 'Roboto';
+    background: transparent;
+    text-align: right;
+}
+
+.calculator-block-content-logic-item-price-input > * {
+    padding-right: 10px;
+}
+
+.calculator-block-content-logic-item-price-input > span {
+    color: #585656;
+}
+
+.calculation-slider {
+    width: 100%;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.22);
+    border: none !important;
+}
+
+.ui-slider-handle {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background-color: #dcdcdc !important;
+    top: -7px !important;
+    border: 5px solid #ffe700 !important;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.22) !important;
+}
+
+.ui-widget-content {
+    background-color: #dcdcdc !important;
+}
+
+.ui-widget-header {
+    background-color: #ffe700 !important;
+}
+
+.ui-slider-horizontal {
+    height: 6px !important;
+}
+
+.calculator-block-content-logic-item-row > p {
+    margin-right: 14px;
+}
+
+.calculator-block-content-logic-item-row > span {
+    margin-left: 14px;
+}
+
+
+.calculator-block-content-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calculator-block-content-result > p {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+
+.calculator-block-content-result-nums {
+    width: 100%;
+    height: 310px;
+    border-radius: 10px;
+    background-color: #e4e1dc;
+}
+
+.calc-results-box {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    margin: auto;
+    margin-top: 35px;
+    flex-direction: column;
+}
+
+.calc-results-header {
+    font-size: 30px;
+}
+
+.calculator-block-content-result-nums__button {
+    width: 230px;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #ffe700;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.calc-results-numbers {
+    height: 50%;
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 6px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 0.5fr 0.3fr;
+}
+
+.calc-results-numbers > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.calc-results-numbers > p {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.calc-results-numbers > p:nth-child(3n) {
+    font-size: 16px;
+}
+
+.wrong-input {
+    transition: top 1s ease-out 0.5s;
+    box-shadow: 0 0 3px 1px red;
+}

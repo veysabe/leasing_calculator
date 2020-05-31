@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title></title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div class="calculator-block">
+            <div class="calculator-block-content">
+                <div class="calculator-block-content-header">
+                    <img class="calculator-block-content-header__img" src="img/iconfinder_31_5955264.png">
+                    <p>Leasing Calculator</p>
+                </div>
+                <div class="calculator-block-content-logic">
+                    <div class="calculator-block-content-logic-item-box">
+                        <div class="calculator-block-content-logic-item">
+                            <div class="calculator-block-content-logic-item-row">
+                                <p>Цена автомобиля</p>
+                                <div class="calculator-block-content-logic-item-price-input">
+                                    <input type="text" id="carPriceAmount"></input>
+                                    <span>Евро</span>
+                                </div>
+                            </div>
+                            <div class="calculator-block-content-logic-item-row">
+                                <p>-</p>
+                                <div class="calculation-slider" id="carPriceSlider"></div>
+                                <span>+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator-block-content-logic-item-box">
+                        <div class="calculator-block-content-logic-item">
+                            <div class="calculator-block-content-logic-item-row">
+                                <p>Срок договора</p>
+                                <div class="calculator-block-content-logic-item-price-input">
+                                    <input type="text" id="contractTerm"></input>
+                                    <span>Месяцев</span>
+                                </div>
+                            </div>
+                            <div class="calculator-block-content-logic-item-row">
+                                <p>-</p>
+                                <div class="calculation-slider" id="contractTermSlider"></div>
+                                <span>+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator-block-content-logic-item-box">
+                        <div class="calculator-block-content-logic-item">
+                            <div class="calculator-block-content-logic-item-row">
+                                <p>Первоначальный взнос</p>
+                                <div class="calculator-block-content-logic-item-price-input">
+                                    <input type="text" id="firstPaymentAmount"></input>
+                                    <span>Евро</span>
+                                </div>
+                            </div>
+                            <div class="calculator-block-content-logic-item-row">
+                                <p>-</p>
+                                <div class="calculation-slider" id="firstPaymentSlider"></div>
+                                <span>+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-block-content-result">
+                    <div class="calculator-block-content-result-nums">
+                        <div class="calc-results-box">
+                            <div class="calc-results-header">
+                                Результаты вычислений
+                            </div>
+                            <div class="calc-results-numbers">
+                                <p>Ежемесечный платеж:</p>
+                                <span id="monthlyPaymentResult"></span>
+                                <p>Евро</p>
+                                <p>Общий процентный платеж:</p>
+                                <span id="percentPayment"></span>
+                                <p>Евро</p>
+                                <p>Общая сумма кредитования:</p>
+                                <span id="allSum"></span>
+                                <p>Евро</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        *Данный калькулятор носит информационный характер.<br>
+                        Могут возникнуть и другие дополнительные расходы
+                    </p>
+                    <div class="calculator-block-content-result-nums__button" id="calculatorCalculateButton">
+                        Рассчитать
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/__calculator-script.js"></script>
+    </body>
+</html>
